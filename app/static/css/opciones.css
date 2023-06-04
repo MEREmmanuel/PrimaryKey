@@ -1,0 +1,100 @@
+.clickable-text {
+  cursor: pointer;
+  color: whitesmoke;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color:rgba(255, 81, 0, 0.822);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.row{
+  padding-top: 50px;
+  font-size: 50px;
+  padding-block-end: 30px;
+}
+.card-img-top {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: whitesmoke;
+  padding-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block-end: 10px;
+}
+
+.navbar-nav{
+  margin-left:auto;
+  width: 20%;
+  border-bottom: 0%;
+}
+
+.nav-item{
+  margin-right: auto;
+  width: 5%;
+  display: contents;
+}
+
+.navbar-text{
+  margin-right: 5%;
+}
+
+.mb-4{
+  margin-top:10%;
+  margin-left:0%;
+  height: auto;
+  width: 100%;
+}
+
+.mb-5{
+  margin-right: 5%;
+  margin-top: 20%;
+  height: auto;
+  width:15%;
+}
+
+.navbar-brand{
+  margin-left: 5%;
+  height: auto;
+  width: 10%;
+}
+
+.custom-navbar {
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 10%;
+}
+
+.card-group{
+  padding-top: 5%;
+}
+
+.btn.btn-primary{
+  background-color:rgba(255, 81, 0, 0.822);
+  border: 1px grey;
+  border-radius: 4px;
+  color: whitesmoke;
+}
+
+.mb-3{
+  padding-top: 5%;
+}

@@ -1,0 +1,87 @@
+{% extends './base.html' %}
+
+{% block title %} Opciones {% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/opciones.css')}}">
+{% endblock %}
+
+{% block body %}
+{% if current_user.is_authenticated == False %}
+<div class="card-group">
+<div class="card">
+    <img src="{{ url_for('static', filename='img/aparta.jpg') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-title">
+            <span class="clickable-text" data-bs-toggle="modal" data-bs-target="#formularioModal">Aparta tu lugar</span>
+        </p>
+        <p class="card-text">Reserva tu estacionamiento ahora y
+            aseg&uacute;rate de tener un espacio disponible para ti en tu pr&oacute;ximo destino.</p>
+        <p class="card-text"><small class="text-muted">Solo te tomará unos minutos</small></p>
+    </div>
+</div>
+<div class="modal" tabindex="-1" id="formularioModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Reserve su lugar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="mensaje-guardado"></div>
+          <!-- Contenido del formulario -->
+          <form>
+            <div class="mb-3">
+              <label for="fecha">Fecha:</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="mb-3">
+              <label for="hora-entrada">Hora de entrada:</label>
+              <input type="time" id="hora-entrada" name="hora-entrada" required>
+            </div>
+            <div class="mb-3">
+              <label for="hora-salida">Hora de salida:</label>
+              <input type="time" id="hora-salida" name="hora-salida" required>
+            </div>
+            <!-- Campos de entrada, botones, etc. -->
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary" formaction="{{ url_for('login') }}">Reservar ya</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="card">
+    <img src="{{ url_for('static', filename='img/registra.jpg') }}" class="card-img-top" alt="">
+    <div class="card-body">
+        <p class="card-title">
+            <span class="clickable-text" data-bs-toggle="modal" data-bs-target="#formularioModal2">Registra un estacionamiento</span>
+        </p>
+        <p class="card-text">Simplifica la administraci&oacute;n de tu estacionamiento al unirte a nuestra plataforma.
+            Atrae m&aacute;s clientes y optimiza tus operaciones.</p>
+        <p class="card-text"><small class="text-muted">Esta opci&oacute;n est&aacute; en desarrollo</small></p>
+    </div>
+</div>
+<div class="modal" tabindex="-1" id="formularioModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Indique la ubicación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del formulario -->
+          <form>
+            <!-- Campos de entrada, botones, etc. -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% block customJS %}
+<script src="{{ url_for('static', filename='js/login.js')}}"></script>
+{% endblock %}
+{% endblock %}

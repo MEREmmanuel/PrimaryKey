@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<table>
+    {% for l in data.estacionamientos %}
+    <tr>
+    <td>{{ l.llave }}</td>
+    <td>{{ l.nombre }}</td>
+    <td>{{ l.barrio }}</td>
+    <td>{{ l.precio }}</td>
+    <td>{{ l.dueno_id.apellidos }}</td>
+    <td>{{ l.dueno_id.nombres }}</td>
+    <td>{{ l.dueno_id.ciudad }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+
+</html>
